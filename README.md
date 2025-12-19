@@ -1,4 +1,4 @@
-[vercel app](https://hackatonqueuesolver.vercel.app/)
+[vercel app](https://queuegov.vercel.app/)
 
 
 
