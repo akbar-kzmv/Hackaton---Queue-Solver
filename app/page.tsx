@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { supabase } from "@/lib/supabaseClient"
+import { supabase } from "@/lib/supabase"
 
 
 export default function RegisterPage() {
@@ -17,7 +17,6 @@ export default function RegisterPage() {
     setLoading(true)
     setMessage("")
 
-    // 1️⃣ Supabase Auth
     const { data, error } = await supabase.auth.signUp({
       email,
       password,
@@ -37,7 +36,7 @@ export default function RegisterPage() {
       return
     }
 
-    // 2️⃣ users table insert
+
     const { error: insertError } = await supabase
       .from("users")
       .insert({
